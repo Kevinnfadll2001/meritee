@@ -11,14 +11,10 @@ class CheckoutController extends Controller
     public function index()
     {
         $cart = session('cart', []);
-        abort_if(empty($cart), 404);
 
         $total = collect($cart)->sum(function ($item) {
-    $qty = isset($item['quantity']) ? (int)$item['quantity'] : 1;
-    $price = isset($item['price']) ? (float)$item['price'] : 0;
-    return $price * $qty;
-});
-
+            return $item['price'] * $item['quantity'];
+        });
 
         return view('pages.checkout', compact('cart', 'total'));
     }

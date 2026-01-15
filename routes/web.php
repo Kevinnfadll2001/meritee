@@ -37,12 +37,19 @@ Route::get('/news/{slug}', [PageController::class, 'newsDetails'])
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
-Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
+// Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
 Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
 
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/checkout/confirm', [CheckoutController::class, 'confirm'])->name('checkout.confirm');
+
+Route::patch('/cart/update/{key}', [CartController::class, 'update'])
+    ->name('cart.update');
+
+// Route::get('/checkout', [CheckoutController::class, 'index'])
+//     ->name('checkout');
+
 // Route::get('/coverage', function () {
 //     return view('coverage'); // resources/views/contact.blade.php
 // })->name('coverage');

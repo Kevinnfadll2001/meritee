@@ -15,7 +15,7 @@
             @php $subtotal = 0; @endphp
 
             @forelse($cart as $id => $item)
-            @php $subtotal += $item['price'] * $item['qty']; @endphp
+            @php $subtotal += $item['price'] * $item['quantity']; @endphp
 
             <div class="cart-row">
 
@@ -34,12 +34,20 @@
                 </div>
 
                 <div class="cart-qty">
-                    <form action="{{ route('cart.update') }}" method="POST">
-                        @csrf
-                        <input type="hidden" name="id" value="{{ $id }}">
-                        <input type="number" name="qty" value="{{ $item['qty'] }}" min="1" onchange="this.form.submit()">
-                    </form>
-                </div>
+    <form action="{{ route('cart.update', $id) }}" method="POST">
+        @csrf
+        @method('PATCH')
+
+        <input type="number"
+               name="quantity"
+               min="1"
+               value="{{ $item['quantity'] }}"
+               onchange="this.form.submit()"
+               style="width:60px; text-align:center;">
+    </form>
+</div>
+
+
 
                 <div class="cart-actions">
                     <form action="{{ route('cart.remove') }}" method="POST">

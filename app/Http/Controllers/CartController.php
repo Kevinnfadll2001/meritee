@@ -19,33 +19,45 @@ class CartController extends Controller
         $id = $request->id;
 
         if (isset($cart[$id])) {
-            $cart[$id]['qty']++;
+            $cart[$id]['quantity']++;
         } else {
             $cart[$id] = [
-                'name'  => $request->name,
-                'price' => $request->price,
-                'image' => $request->image,
-                'qty'   => 1,
+                'id'       => $id,
+                'name'     => $request->name,
+                'price'    => (float) $request->price,
+                'image'    => $request->image,
+                'quantity' => 1,
             ];
         }
 
         session()->put('cart', $cart);
+
         return redirect()->route('cart.index');
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $key)
     {
         $cart = session()->get('cart', []);
-        $cart[$request->id]['qty'] = $request->qty;
+
+        if (isset($cart[$key])) {
+            $cart[$key]['quantity'] = max(1, (int) $request->quantity);
+        }
+
         session()->put('cart', $cart);
+
         return back();
     }
 
     public function remove(Request $request)
     {
         $cart = session()->get('cart', []);
-        unset($cart[$request->id]);
+
+        if (isset($cart[$request->id])) {
+            unset($cart[$request->id]);
+        }
+
         session()->put('cart', $cart);
+
         return back();
     }
 }

@@ -51,21 +51,17 @@
         <div class="col-lg-5">
             <h4>Review Your Cart</h4>
 
-            @foreach($cart as $item)
-                <div class="d-flex mb-3 align-items-center">
-                    <img src="{{ asset('assets/images/products/'.$item['image']) }}"
-                         style="width:70px;height:70px;object-fit:cover;border-radius:6px;">
-                    <div class="ms-3">
-                        <strong>{{ $item['name'] }}</strong><br>
-                      @php($qty = $item['quantity'] ?? 1)
-{{ $qty }} × ${{ $item['price'] ?? 0 }}
+@foreach($cart as $item)
+    <div class="checkout-item">
+        <img src="{{ asset('assets/images/products/'.$item['image']) }}" width="60">
 
-                    </div>
-                </div>
-            @endforeach
+        <strong>{{ $item['name'] }}</strong><br>
+        {{ $item['quantity'] }} × ${{ number_format($item['price'], 2) }}
+    </div>
+@endforeach
 
-            <hr>
-            <h5>Total: ${{ number_format($total, 2) }}</h5>
+<h4>Total: ${{ number_format($total, 2) }}</h4>
+
         </div>
 
     </div>
