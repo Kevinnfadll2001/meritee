@@ -131,7 +131,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
+                                <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Products</a>
                             </li>
 
                             {{-- <li class="nav-item">

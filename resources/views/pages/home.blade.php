@@ -261,281 +261,83 @@
 <div class="services-area-two services-area-bg pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <span class="sp-title2">Services</span>
+            <span class="sp-title2">Products</span>
             <h2>Professional Contact Center Solutions</h2>
         </div>
 
         <div class="services-slider-two owl-carousel owl-theme pt-45">
 
-            <!-- Customer Care -->
-            <div class="services-card">
-                <br><br>
-                {{-- <div class="service-icon">
-                    <i class="flaticon-vector"></i>
-                </div> --}}
-                <h3><a href="{{ url('/services') }}">Customer Care</a></h3>
-                <p>
-                    With a focus on quality, CCI customer care agents have the know-how and tools to treat each
-                    customer individually to ensure a personalized and appropriate response to their call.
-                </p>
-                <a href="{{ url('/services') }}" class="read-btn">Read More</a>
-                <div class="top">
-                    <img src="assets/images/services/services-top.png" alt="">
-                    <img src="assets/images/services/services-top2.png" alt="">
-                </div>
-            </div>
-
-            <!-- Database Management -->
-            <div class="services-card">
-                <br><br>
-                {{-- <div class="service-icon">
-                    <i class="flaticon-project-management"></i>
-                </div> --}}
-                <h3><a href="{{ url('/services') }}">Database Management</a></h3>
-                <p>
-                    Turn one time customers into loyal returning brand ambassadors by keeping in touch and making
-                    them feel appreciated.
-                </p>
-                <a href="{{ url('/services') }}" class="read-btn">Read More</a>
-                <div class="top">
-                    <img src="assets/images/services/services-top.png" alt="">
-                    <img src="assets/images/services/services-top2.png" alt="">
-                </div>
-            </div>
-
-            <!-- Lead Generation -->
-            <div class="services-card">
-                <br><br>
-                {{-- <div class="service-icon">
-                    <i class="flaticon-digital-marketing"></i>
-                </div> --}}
-                <h3><a href="{{ url('/services') }}">Lead Generation</a></h3>
-                <p>
-                    Your database is managed and maintained by our sales team to identify the best potential buyers
-                    with opportunities to cross-sell and up-sell your product or service.
-                </p>
-                <a href="{{ url('/services') }}" class="read-btn">Read More</a>
-                <div class="top">
-                    <img src="assets/images/services/services-top.png" alt="">
-                    <img src="assets/images/services/services-top2.png" alt="">
-                </div>
-            </div>
-
-            <!-- Omni-Channel -->
-            <div class="services-card">
-                <br><br>
-                {{-- <div class="service-icon">
-                    <i class="flaticon-content"></i>
-                </div> --}}
-                <h3><a href="{{ url('/services') }}">Omni-Channel Contact Center</a></h3>
-                <p>
-                    Maintaining constant communication across all your channels is essential to developing and
-                    growing your relationship with customers whose expectations are rising.
-                </p>
-                <a href="{{ url('/services') }}" class="read-btn">Read More</a>
-                <div class="top">
-                    <img src="assets/images/services/services-top.png" alt="">
-                    <img src="assets/images/services/services-top2.png" alt="">
-                </div>
-            </div>
-
-            <!-- Surveys -->
-            <div class="services-card">
-                <br><br>
-                {{-- <div class="service-icon">
-                    <i class="flaticon-vector"></i>
-                </div> --}}
-                <h3><a href="{{ url('/services') }}">Surveys & Market Research</a></h3>
-                <p>
-                    The best way to know how customers feel about your product or service is to ask them.
-                </p>
-                <a href="{{ url('/services') }}" class="read-btn">Read More</a>
-                <div class="top">
-                    <img src="assets/images/services/services-top.png" alt="">
-                    <img src="assets/images/services/services-top2.png" alt="">
-                </div>
-            </div>
-
-            <!-- Technical Support -->
-            <div class="services-card">
-                <br><br>
-                {{-- <div class="service-icon">
-                    <i class="flaticon-project-management"></i>
-                </div> --}}
-                <h3><a href="{{ url('/services') }}">Technical Support</a></h3>
-                <p>
-                    Our technical support agents combine analytical, technical, and communication skills to
-                    resolve customer issues efficiently and promptly.
-                </p>
-                <a href="{{ url('/services') }}" class="read-btn">Read More</a>
-                <div class="top">
-                    <img src="assets/images/services/services-top.png" alt="">
-                    <img src="assets/images/services/services-top2.png" alt="">
-                </div>
-            </div>
-
-            <!-- Telemarketing -->
-            <div class="services-card">
-                <br><br>
-                {{-- <div class="service-icon">
-                    <i class="flaticon-digital-marketing"></i>
-                </div> --}}
-                <h3><a href="{{ url('/services') }}">Telemarketing</a></h3>
-                <p>
-                    Benefit from the expertise of sales professionals dedicated to sell and up-sell your products
-                    or services.
-                </p>
-                <a href="{{ url('/services') }}" class="read-btn">Read More</a>
-                <div class="top">
-                    <img src="assets/images/services/services-top.png" alt="">
-                    <img src="assets/images/services/services-top2.png" alt="">
-                </div>
-            </div>
-
+    <!-- BODY SCRUB -->
+    <div class="services-card">
+        <br><br>
+        <h3><a href="{{ url('/products') }}">Body Scrub</a></h3>
+        <p>
+            Gently exfoliates dead skin while smoothing and softening the body.
+            Designed to boost your natural glow, support ingrown-prone areas,
+            and hydrate the skin as you exfoliate.
+        </p>
+        <a href="{{ url('/products') }}" class="read-btn">View Product</a>
+        <div class="top">
+            <img src="{{ asset('assets/images/services/services-top.png') }}" alt="">
+            <img src="{{ asset('assets/images/services/services-top2.png') }}" alt="">
         </div>
+    </div>
+
+    <!-- LIP SCRUB -->
+    <div class="services-card">
+        <br><br>
+        <h3><a href="{{ url('/products') }}">Lip Scrub</a></h3>
+        <p>
+            Removes dry, flaky skin to reveal softer, smoother lips.
+            Helps lip care absorb better while enhancing the lips’
+            natural texture and comfort.
+        </p>
+        <a href="{{ url('/products') }}" class="read-btn">View Product</a>
+        <div class="top">
+            <img src="{{ asset('assets/images/services/services-top.png') }}" alt="">
+            <img src="{{ asset('assets/images/services/services-top2.png') }}" alt="">
+        </div>
+    </div>
+
+    <!-- LIP OIL -->
+    <div class="services-card">
+        <br><br>
+        <h3><a href="{{ url('/products') }}">Lip Oil</a></h3>
+        <p>
+            Deeply hydrates and nourishes lips while adding a natural,
+            glossy finish. Protects from dryness with a comfortable,
+            non-sticky feel for everyday wear.
+        </p>
+        <a href="{{ url('/products') }}" class="read-btn">View Product</a>
+        <div class="top">
+            <img src="{{ asset('assets/images/services/services-top.png') }}" alt="">
+            <img src="{{ asset('assets/images/services/services-top2.png') }}" alt="">
+        </div>
+    </div>
+
+    <!-- TANNING OIL -->
+    <div class="services-card">
+        <br><br>
+        <h3><a href="{{ url('/products') }}">Tanning Oil</a></h3>
+        <p>
+            Enhances natural tanning under the sun while keeping skin
+            soft and moisturized. Helps achieve a glowy, sun-kissed look
+            with a lightweight, fast-absorbing texture.
+        </p>
+        <a href="{{ url('/products') }}" class="read-btn">View Product</a>
+        <div class="top">
+            <img src="{{ asset('assets/images/services/services-top.png') }}" alt="">
+            <img src="{{ asset('assets/images/services/services-top2.png') }}" alt="">
+        </div>
+    </div>
+
+</div>
+
     </div>
 </div>
 <br><br>
 <!-- Services Area End -->
 
-
-<!-- Project Area Two -->
-{{-- <div class="project-area-two pt-100 pb-70">
-    <div class="container">
-        <div class="section-title text-center">
-            <span class="sp-title2">Project</span>
-            <h2>Our Recent Project Case</h2>
-        </div>
-
-        <div class="row pt-45">
-            <div class="col-lg-7">
-                <div class="project-slider-two owl-carousel owl-theme" data-slider-id="1">
-                    <div class="project-slider-img">
-                        <img src="assets/images/projects/project-style1.jpg" alt="Images">
-                    </div>
-
-                    <div class="project-slider-img">
-                        <img src="assets/images/projects/project-style2.jpg" alt="Images">
-                    </div>
-
-                    <div class="project-slider-img">
-                        <img src="assets/images/projects/project-style3.jpg" alt="Images">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5">
-                <div class="thumbs-wrap">
-                    <div class="owl-thumbs project-area-thumb" data-slider-id="1">
-                        <div class="owl-thumb-item">
-                            <div class="content">
-                                <h3>Customer Service</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                            </div>
-                        </div>
-
-                        <div class="owl-thumb-item">
-                            <div class="content">
-                                <h3>Design Service</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                            </div>
-                        </div>
-
-                        <div class="owl-thumb-item">
-                            <div class="content">
-                                <h3>Executive Admin</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-<!-- Project Area Two End -->
-
-<!-- Pricing Area End -->
-{{-- <div class="pricing-area pt-100 pb-70">
-    <div class="container">
-        <div class="section-title text-center">
-            <span class="sp-title2">Pricing Plan</span>
-            <h2>Select Pricing Plan To Get More</h2>
-        </div>
-
-        <div class="row pt-45 justify-content-center">
-            <div class="col-lg-4 col-sm-6">
-                <div class="pricing-card">
-                    <div class="top">
-                        <img src="assets/images/price/shape1.png" alt="Images">
-                        <img src="assets/images/price/shape2.png" alt="Images">
-                    </div>
-                    <div class="price-icon">
-                        <img src="assets/images/price/price-icon1.png" alt="Images">
-                    </div>
-                    <h3>Entrepreneur Plan</h3>
-                    <h4>$399 <span>/Weekly</span></h4>
-                    <ul>
-                        <li><i class='bx bx-check-circle'></i> 12 Hours Per Month</li>
-                        <li><i class='bx bx-check-circle'></i> Dedicated Assistant</li>
-                        <li><i class='bx bx-check-circle'></i> 1 User Included</li>
-                    </ul>
-
-                    <div class="price-btn-area text-center">
-                        <a href="pricing.html" class="price-btn">Subscribe Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="pricing-card">
-                    <div class="top">
-                        <img src="assets/images/price/shape1.png" alt="Images">
-                        <img src="assets/images/price/shape2.png" alt="Images">
-                    </div>
-                    <div class="price-icon">
-                        <img src="assets/images/price/price-icon2.png" alt="Images">
-                    </div>
-                    <h3>Small Business Plan</h3>
-                    <h4>$999 <span>/Monthly</span></h4>
-                    <ul>
-                        <li><i class='bx bx-check-circle'></i> 18 Hours Per Month</li>
-                        <li><i class='bx bx-check-circle'></i> Dedicated Assistant</li>
-                        <li><i class='bx bx-check-circle'></i> 2 User Included</li>
-                    </ul>
-
-                    <div class="price-btn-area text-center">
-                        <a href="pricing.html" class="price-btn">Subscribe Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="pricing-card">
-                    <div class="top">
-                        <img src="assets/images/price/shape1.png" alt="Images">
-                        <img src="assets/images/price/shape2.png" alt="Images">
-                    </div>
-                    <div class="price-icon">
-                        <img src="assets/images/price/price-icon3.png" alt="Images">
-                    </div>
-                    <h3>Team Plan</h3>
-                    <h4>$1090 <span>/Yearly </span></h4>
-                    <ul>
-                        <li><i class='bx bx-check-circle'></i> 24 Hours Per Month</li>
-                        <li><i class='bx bx-check-circle'></i> Dedicated Assistant</li>
-                        <li><i class='bx bx-check-circle'></i> 4 User Included</li>
-                    </ul>
-
-                    <div class="price-btn-area text-center">
-                        <a href="pricing.html" class="price-btn">Subscribe Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-<!-- Pricing Area End -->
 
 <!-- Testimonial Area Two -->
 <div class="testimonial-area-two pt-100 pb-70">

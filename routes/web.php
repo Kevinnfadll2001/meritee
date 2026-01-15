@@ -6,8 +6,9 @@ use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\CountyController;
 use App\Http\Controllers\FacilityController;
-
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CheckoutController;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about-us', [PageController::class, 'about'])->name('about');
@@ -15,7 +16,7 @@ Route::get('/careers', [PageController::class, 'careers'])->name('careers');
 
 Route::get('/news', [PageController::class, 'news'])->name('news');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
-Route::get('/services', [PageController::class, 'services'])->name('services');
+Route::get('/products', [PageController::class, 'services'])->name('services');
 
 
 
@@ -34,7 +35,14 @@ Route::get('/news/{slug}', [PageController::class, 'newsDetails'])
 
 
 
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
 
+
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::post('/checkout/confirm', [CheckoutController::class, 'confirm'])->name('checkout.confirm');
 // Route::get('/coverage', function () {
 //     return view('coverage'); // resources/views/contact.blade.php
 // })->name('coverage');

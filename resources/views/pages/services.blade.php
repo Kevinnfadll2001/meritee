@@ -3,361 +3,348 @@
 @section('content')
 
 <style>
-    /* Fix banner position under fixed header */
     .inner-banner-offset {
         margin-top: -5px;
     }
 
-    /* Banner background image */
     .inner-bg1 {
         background-image: url("{{ asset('assets/images/services/services.png') }}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        min-height: 300px; /* adjust height if needed */
+        min-height: 300px;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+
+    .product-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* SQUARE PRODUCT IMAGE BOX */
+/* PERFECT SQUARE IMAGE CONTAINER */
+.product-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* 🔑 makes it square */
+    background: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+/* Image fits INSIDE square */
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      /* shows full product */
+}
+
+/* If image missing → no broken layout */
+.product-img img[src=""],
+.product-img img:not([src]) {
+    display: none;
+}
+
+
+/* If image is missing or broken, don't keep huge space */
+.product-img img[src=""],
+.product-img img:not([src]) {
+    display: none;
+}
+
+
+
+    .product-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        color: #113412;
+    }
+
+    .product-ingredients {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 12px;
+    }
+
+    .product-benefits {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .product-benefits li {
+        font-size: 14px;
+        margin-bottom: 6px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .product-benefits li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #113412;
+        font-weight: bold;
+    }
+
+    .product-price {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    .add-to-cart-btn {
+        margin-top: auto;
+        display: inline-block;
+        text-align: center;
+        padding: 12px;
+        background: #113412;
+        color: #fff;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+        background: #0d2a2f;
+        color: #fff;
     }
 </style>
 
-<!-- Inner Banner -->
+<!-- Banner -->
 <div class="inner-banner inner-bg1 inner-banner-offset">
     <div class="container">
         <div class="inner-title text-center">
-            <h3>Services</h3>
+            <h3>Products</h3>
             <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
-                <li>Services</li>
+                <li>Products</li>
             </ul>
         </div>
     </div>
 </div>
 
-
-         <!-- Services Area -->
-
-         <style>
-/* ===== Services Tabs Improvements ===== */
-
-.services-tab .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    padding: 0;
-    margin: 0 auto;
-    list-style: none;
-}
-
-/* Tab buttons */
-.services-tab .tabs li a {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #f2f2f2;
-    color: #222;
-    font-weight: 500;
-    font-size: 15px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    text-align: center;
-    min-width: 210px;
-}
-
-/* Hover effect */
-.services-tab .tabs li a:hover {
-    background: #113412;
-    color: #fff;
-}
-
-/* Active tab (your script already adds .current) */
-.services-tab .tabs li.current a {
-    background: #113412;
-    color: #fff;
-    box-shadow: 0 8px 20px rgba(15, 15, 15, 0.3);
-}
-
-/* Second row alignment (Technical Support + Telemarketing) */
-.services-tab .tabs li:nth-child(6),
-.services-tab .tabs li:nth-child(7) {
-    margin-top: 8px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .services-tab .tabs li a {
-        min-width: 100%;
-    }
-}
-</style>
-
-<div class="services-area-two pt-100 pb-70">
+<!-- Products Section -->
+<div class="pt-100 pb-70">
     <div class="container">
-        <div class="section-title text-center">
-            <span class="sp-title">Services</span>
-            <h2>Professional Contact Center Solutions</h2>
+
+        <!-- ================= BODY CARE ================= -->
+        <div class="section-title text-center mb-40">
+            <span class="sp-title">Body Care</span>
+            <h2>Nourish & Glow</h2>
+            <p>Gentle formulas designed to hydrate, smooth, and enhance your skin’s natural radiance.</p>
         </div>
 
-        <div class="tab services-tab pt-45">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="tabs">
-                        <li><a href="#">Customer Care</a></li>
-                        <li><a href="#">Database Management</a></li>
-                        <li><a href="#">Lead Generation</a></li>
-                        <li><a href="#">Omni-Channel Contact Center</a></li>
-                        <li><a href="#">Surveys & Market Research</a></li>
-                        <li><a href="#">Technical Support</a></li>
-                        <li><a href="#">Telemarketing</a></li>
-                    </ul>
+        <div class="product-grid mb-80">
+
+            <!-- BODY SCRUB -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="{{ asset('assets/images/products/blog1.jpeg') }}" alt="Body Scrub">
                 </div>
 
-                <div class="col-lg-12 col-md-12">
-                    <div class="tab_content current active pt-45">
+                <h3>Body Scrub</h3>
 
-                        <!-- 1. Customer Care -->
-                        <div class="tabs_item current">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="services-tab-img">
-                                        <img src="assets/images/services/serv1.jpeg" alt="Images">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="services-tab-content pl-20">
-                                        <h2>Customer Care</h2>
-                                        <p>
-                                            With a focus on quality, Call Center International customer care agents
-                                            treat every caller individually, ensuring a personalized, professional,
-                                            and effective response that enhances customer satisfaction.
-                                        </p>
-                                        <ul class="services-tab-list">
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Personalized customer interaction</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Quality-driven service delivery</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Customer satisfaction focused</li>
-                                        </ul>
-                                        {{-- <a href="{{ url('/services') }}" class="default-btn border-radius-5">Read More</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 2. Database Management -->
-                        <div class="tabs_item">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="services-tab-content pr-20">
-                                        <h2>Database Management</h2>
-                                        <p>
-                                            Turn one-time customers into loyal returning brand ambassadors by keeping
-                                            databases accurate, up to date, and actively managed for ongoing engagement.
-                                        </p>
-                                        <ul class="services-tab-list">
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> CRM database maintenance</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Customer data organization</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Long-term relationship building</li>
-                                        </ul>
-                                        {{-- <a href="{{ url('/services') }}" class="default-btn border-radius-5">Read More</a> --}}
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="services-tab-img">
-                                        <img src="assets/images/services/serv2.jpeg" alt="Images">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 3. Lead Generation -->
-                        <div class="tabs_item">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="services-tab-img">
-                                        <img src="assets/images/services/serv3.jpeg" alt="Images">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="services-tab-content pl-20">
-                                        <h2>Lead Generation</h2>
-                                        <p>
-                                            Our sales teams identify and qualify potential buyers, creating
-                                            opportunities to cross-sell and up-sell products and services while
-                                            maximizing conversion rates.
-                                        </p>
-                                        <ul class="services-tab-list">
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Qualified lead identification</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Sales-focused outreach</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Conversion optimization</li>
-                                        </ul>
-                                        {{-- <a href="{{ url('/services') }}" class="default-btn border-radius-5">Read More</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 4. Omni-Channel -->
-                        <div class="tabs_item">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="services-tab-content pr-20">
-                                        <h2>Omni-Channel Contact Center</h2>
-                                        <p>
-                                            Maintaining constant communication across voice, email, chat, and digital
-                                            platforms is essential to building strong customer relationships.
-                                        </p>
-                                        <ul class="services-tab-list">
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Multi-channel engagement</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Unified customer experience</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Real-time communication</li>
-                                        </ul>
-                                        {{-- <a href="{{ url('/services') }}" class="default-btn border-radius-5">Read More</a> --}}
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="services-tab-img">
-                                        <img src="assets/images/services/serv4.jpeg" alt="Images">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 5. Surveys & Market Research -->
-                        <div class="tabs_item">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="services-tab-img">
-                                        <img src="assets/images/services/serv5.jpeg" alt="Images">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="services-tab-content pl-20">
-                                        <h2>Surveys & Market Research</h2>
-                                        <p>
-                                            The best way to understand how customers feel about your product or
-                                            service is to ask them through structured surveys and research programs.
-                                        </p>
-                                        <ul class="services-tab-list">
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Customer feedback collection</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Market insight analysis</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Data-driven decisions</li>
-                                        </ul>
-                                        {{-- <a href="{{ url('/services') }}" class="default-btn border-radius-5">Read More</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 6. Technical Support -->
-                        <div class="tabs_item">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="services-tab-content pr-20">
-                                        <h2>Technical Support</h2>
-                                        <p>
-                                            Our technical support agents combine analytical, technical, and
-                                            communication skills to resolve customer issues efficiently and promptly.
-                                        </p>
-                                        <ul class="services-tab-list">
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Issue diagnosis</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Technical troubleshooting</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Fast resolution</li>
-                                        </ul>
-                                        {{-- <a href="{{ url('/services') }}" class="default-btn border-radius-5">Read More</a> --}}
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="services-tab-img">
-                                        <img src="assets/images/services/serv6.jpeg" alt="Images">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 7. Telemarketing -->
-                        <div class="tabs_item">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="services-tab-img">
-                                        <img src="assets/images/services/serv7.jpeg" alt="Images">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="services-tab-content pl-20">
-                                        <h2>Telemarketing</h2>
-                                        <p>
-                                            Benefit from experienced sales professionals dedicated to selling,
-                                            cross-selling, and up-selling your products and services effectively.
-                                        </p>
-                                        <ul class="services-tab-list">
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Sales-driven outreach</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Upselling opportunities</li>
-                                            <li><i class="flaticon-arrow-pointing-to-right"></i> Revenue growth support</li>
-                                        </ul>
-                                        {{-- <a href="{{ url('/services') }}" class="default-btn border-radius-5">Read More</a> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <div class="product-ingredients">
+                    Sugar crystals, natural oils, botanical extracts
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Services Area End -->
 
+                <ul class="product-benefits">
+                    <li>Gently exfoliates dead skin</li>
+                    <li>Smooths and softens</li>
+                    <li>Boosts natural glow</li>
+                    <li>Hydrates while exfoliating</li>
+                </ul>
 
-        <!-- Choose Area Two -->
-        <div class="choose-area-two pt-100 pb-70">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
+                <div class="product-price">$18.00</div>
 
-            <!-- LEFT CONTENT -->
-            <div class="col-lg-6">
-                <div class="choose-content-left">
-                    <div class="section-title">
-                        <span class="sp-title">Why Choose Us</span>
+                <form action="{{ route('cart.add') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="id" value="body-scrub">
+                    <input type="hidden" name="name" value="Body Scrub">
+                    <input type="hidden" name="price" value="18">
+                    <input type="hidden" name="image" value="blog1.jpeg">
 
-                        <!-- NEW PROFESSIONAL TITLE -->
-                        <h2>More Than Outsourcing — A True Extension of Your Brand</h2>
-
-                        <!-- YOUR TEXT (PLACED CLEANLY) -->
-                        <p>
-                            At Call Center International (CCI), we go beyond outsourced support to
-                            become a seamless extension of your brand. With U.S. headquarters and
-                            global teams, we combine international reach with strict quality
-                            standards, clear communication, and a human-first approach.
-                        </p>
-
-                        <p>
-                            Our highly trained, fluent agents deliver consistent, professional
-                            service, while our scalable solutions adapt quickly to your business
-                            needs without compromising performance or customer experience.
-                        </p>
-
-                        <p>
-                            Supported by secure infrastructure, structured QA systems, and
-                            data-driven reporting, CCI is built to handle high-volume operations
-                            across customer care, lead generation, dispatch, and back-office
-                            support — always with a partnership-focused mindset centered on
-                            long-term success.
-                        </p>
-                    </div>
-                </div>
+                    <button type="submit" class="add-to-cart-btn">
+                        Add to Cart
+                    </button>
+                </form>
             </div>
 
-            <!-- RIGHT IMAGE (UNCHANGED) -->
-            <div class="col-lg-6">
-                <div class="choose-img-three">
-                    <img src="assets/images/choose-img/choose.jpg" alt="Images">
-                    <div class="line">
-                        <img src="assets/images/choose-img/choose-line.png" alt="Choose Images">
-                    </div>
+            <!-- TANNING OIL -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="{{ asset('assets/images/products/tanning-oil.jpg') }}" alt="Tanning Oil">
                 </div>
+
+                <h3>Tanning Oil</h3>
+
+                <div class="product-ingredients">
+                    Lightweight oils, skin-conditioning blend
+                </div>
+
+                <ul class="product-benefits">
+                    <li>Enhances natural tanning</li>
+                    <li>Leaves skin soft & moisturized</li>
+                    <li>Fast-absorbing texture</li>
+                </ul>
+
+                <div class="product-price">$22.00</div>
+
+                <form action="{{ route('cart.add') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="id" value="tanning-oil">
+                    <input type="hidden" name="name" value="Tanning Oil">
+                    <input type="hidden" name="price" value="22">
+                    <input type="hidden" name="image" value="tanning-oil.jpg">
+
+                    <button type="submit" class="add-to-cart-btn">
+                        Add to Cart
+                    </button>
+                </form>
             </div>
 
         </div>
+
+        <!-- ================= LIP CARE ================= -->
+        <div class="section-title text-center mb-40">
+            <span class="sp-title">Lip Care</span>
+            <h2>Soft, Smooth & Hydrated</h2>
+            <p>Everyday essentials to keep your lips healthy, nourished, and comfortable.</p>
+        </div>
+
+        <div class="product-grid mb-80">
+
+            <!-- LIP SCRUB -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="{{ asset('assets/images/products/lip-scrub.jpg') }}" alt="Lip Scrub">
+                </div>
+
+                <h3>Lip Scrub</h3>
+
+                <div class="product-ingredients">
+                    Fine sugar, nourishing oils
+                </div>
+
+                <ul class="product-benefits">
+                    <li>Removes dry, flaky skin</li>
+                    <li>Leaves lips soft & smooth</li>
+                    <li>Enhances natural texture</li>
+                </ul>
+
+                <div class="product-price">$12.00</div>
+
+                <form action="{{ route('cart.add') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="id" value="lip-scrub">
+                    <input type="hidden" name="name" value="Lip Scrub">
+                    <input type="hidden" name="price" value="12">
+                    <input type="hidden" name="image" value="lip-scrub.jpg">
+
+                    <button type="submit" class="add-to-cart-btn">
+                        Add to Cart
+                    </button>
+                </form>
+            </div>
+
+            <!-- LIP OIL -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="{{ asset('assets/images/products/lip-oil.jpg') }}" alt="Lip Oil">
+                </div>
+
+                <h3>Lip Oil</h3>
+
+                <div class="product-ingredients">
+                    Natural oils, vitamin-rich blend
+                </div>
+
+                <ul class="product-benefits">
+                    <li>Deep hydration</li>
+                    <li>Natural glossy finish</li>
+                    <li>Comfortable, non-sticky feel</li>
+                </ul>
+
+                <div class="product-price">$15.00</div>
+
+                <form action="{{ route('cart.add') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="id" value="lip-oil">
+                    <input type="hidden" name="name" value="Lip Oil">
+                    <input type="hidden" name="price" value="15">
+                    <input type="hidden" name="image" value="lip-oil.jpg">
+
+                    <button type="submit" class="add-to-cart-btn">
+                        Add to Cart
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ================= BEAUTY ESSENTIALS ================= -->
+        <div class="section-title text-center mb-40">
+            <span class="sp-title">Beauty Essentials</span>
+            <h2>Defined & Nourished</h2>
+            <p>Targeted care for lashes and brows with gentle, effective formulas.</p>
+        </div>
+
+        <div class="product-grid">
+
+            <!-- LASH & EYEBROW SERUM -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="{{ asset('assets/images/products/lash-serum.jpg') }}" alt="Lash & Eyebrow Serum">
+                </div>
+
+                <h3>Lash & Eyebrow Serum</h3>
+
+                <div class="product-ingredients">
+                    Conditioning oils, nourishing actives
+                </div>
+
+                <ul class="product-benefits">
+                    <li>Strengthens lashes & brows</li>
+                    <li>Promotes fuller-looking hair</li>
+                    <li>Reduces breakage</li>
+                    <li>Gentle for daily use</li>
+                </ul>
+
+                <div class="product-price">$25.00</div>
+
+                <form action="{{ route('cart.add') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="id" value="lash-serum">
+                    <input type="hidden" name="name" value="Lash & Eyebrow Serum">
+                    <input type="hidden" name="price" value="25">
+                    <input type="hidden" name="image" value="lash-serum.jpg">
+
+                    <button type="submit" class="add-to-cart-btn">
+                        Add to Cart
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
     </div>
 </div>
 
-        <!-- Choose Area End -->
+
 
 @endsection

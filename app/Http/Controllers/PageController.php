@@ -39,7 +39,7 @@ private function newsData()
     return [
         [
         'slug' => 'lip-balm-benefits',
-        'img' => 'lip-balm.jpg',
+        'img' => 'blog1.jpeg',
         'date' => 'Lip Balm',
         'title' => 'Lip Balm — Everyday Moisture & Comfort',
         'content' => '
