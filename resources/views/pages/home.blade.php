@@ -11,33 +11,31 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="banner-content-two">
-                            <h1>Communication Beyond Expectations</h1>
-                            <p>At Call Center International, we pride ourselves in being a renowned professional outsourcing services company providing telephone and Internet-based contact center services for a wide variety of industry sectors worldwide. </p>
+                            <h1>Because you deserve it</h1>
+                            <p>At Mérîté, nature is our formula. We handcraft clean, nourishing skincare that loves every skin type. </p>
                             <div class="banner-btn">
                                 <a href="{{ url('/about-us') }}" class="default-btn border-radius-5">Get Started</a>
                             </div>
-                            {{-- <ul class="social-link">
-                                        <li>
-                                            <a href="https://www.facebook.com/" target="_blank">
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.linkedin.com/" target="_blank">
-                                                <i class='bx bxl-linkedin' ></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.pinterest.com/" target="_blank">
-                                                <i class='bx bxl-pinterest-alt'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/" target="_blank">
-                                                <i class='bx bxl-instagram'></i>
-                                            </a>
-                                        </li>
-                                    </ul> --}}
+                            <ul class="social-link">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.tiktok.com/" target="_blank">
+                                        <i class='bx bxl-tiktok'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
 
@@ -63,47 +61,49 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="banner-content-two">
-                            <h1>Communication Beyond Expectations</h1>
-                            <p>At Call Center International, we pride ourselves in being a renowned professional outsourcing services company providing telephone and Internet-based contact center services for a wide variety of industry sectors worldwide. </p>
+                            <h1>Because you deserve it</h1>
+                            <p>At Mérîté, nature is our formula. We handcraft clean, nourishing skincare that loves every skin type. </p>
                             <div class="banner-btn">
                                 <a href="{{ url('/about-us') }}" class="default-btn border-radius-5">Get Started</a>
                             </div>
-                            {{-- <ul class="social-link">
-                                        <li>
-                                            <a href="https://www.facebook.com/" target="_blank">
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.linkedin.com/" target="_blank">
-                                                <i class='bx bxl-linkedin' ></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.pinterest.com/" target="_blank">
-                                                <i class='bx bxl-pinterest-alt'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/" target="_blank">
-                                                <i class='bx bxl-instagram'></i>
-                                            </a>
-                                        </li>
-                                    </ul> --}}
+                            <ul class="social-link">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.tiktok.com/" target="_blank">
+                                        <i class='bx bxl-tiktok'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="banner-img-two">
-                            <video autoplay muted loop playsinline style="width: 120%; height:120%; object-fit:cover;">
-                                <source src="{{ asset('assets/video/video1.mp4') }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-lg-6">
+                                <div class="banner-img-two">
+                                    <video autoplay muted loop playsinline style="width:200%; height:200%; object-fit:cover;">
+                                        <source src="{{ asset('assets/video/video1.mp4') }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="banner-item">
@@ -111,42 +111,45 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="banner-content-two">
-                            <h1>Communication Beyond Expectations</h1>
-                            <p>At Call Center International, we pride ourselves in being a renowned professional outsourcing services company providing telephone and Internet-based contact center services for a wide variety of industry sectors worldwide. </p>
+                            <h1>Because you deserve it</h1>
+                            <p>At Mérîté, nature is our formula. We handcraft clean, nourishing skincare that loves every skin type. </p>
                             <div class="banner-btn">
                                 <a href="{{ url('/about-us') }}" class="default-btn border-radius-5">Get Started</a>
                             </div>
-                            {{-- <ul class="social-link">
-                                        <li>
-                                            <a href="https://www.facebook.com/" target="_blank">
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.linkedin.com/" target="_blank">
-                                                <i class='bx bxl-linkedin' ></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.pinterest.com/" target="_blank">
-                                                <i class='bx bxl-pinterest-alt'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/" target="_blank">
-                                                <i class='bx bxl-instagram'></i>
-                                            </a>
-                                        </li>
-                                    </ul> --}}
+                            <ul class="social-link">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.tiktok.com/" target="_blank">
+                                        <i class='bx bxl-tiktok'></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="banner-img-two">
-                            <video autoplay muted loop playsinline style="width:120%; height:120%; object-fit:cover;">
-                                <source src="{{ asset('assets/video/video1.mp4') }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-lg-6">
+                                <div class="banner-img-two">
+                                    <video autoplay muted loop playsinline style="width:200%; height:200%; object-fit:cover;">
+                                        <source src="{{ asset('assets/video/video1.mp4') }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -170,23 +173,19 @@
                 <div class="about-content pl-20">
                     <div class="section-title">
                         <span class="sp-title2">About Us</span>
-                        <h2>Solving Problems with Clarity, Simplicity & Honesty</h2>
+                        <h2>Honest Skincare, Made Simple & Clear</h2>
                         <p>
-                            Call Center International (CCI) is a professional outsourcing services company delivering
-                            telephone and internet-based contact solutions to businesses worldwide. With a strong
-                            focus on communication beyond expectations, we help organizations achieve measurable
-                            results and lasting customer satisfaction.
-                        </p>
+                            Mérîté began as a dream — to create natural, honest skincare that makes self-care feel beautiful and effortless. Today, that dream is real. </p>
                     </div>
 
                     <ul class="about-list">
-                        <li><i class='flaticon-arrow-pointing-to-right'></i> Global contact center solutions</li>
-                        <li><i class='flaticon-arrow-pointing-to-right'></i> Reliable, high-speed infrastructure</li>
-                        <li><i class='flaticon-arrow-pointing-to-right'></i> Skilled, multilingual agents</li>
-                        <li><i class='flaticon-arrow-pointing-to-right'></i> Experienced international management</li>
+                        <li><i class='flaticon-arrow-pointing-to-right'></i> Clean, thoughtfully sourced ingredients</li>
+                        <li><i class='flaticon-arrow-pointing-to-right'></i> Gentle formulas for everyday self-care</li>
+                        <li><i class='flaticon-arrow-pointing-to-right'></i> Transparent, honest skincare philosophy</li>
+                        <li><i class='flaticon-arrow-pointing-to-right'></i> Crafted to feel effortless and effective</li>
                     </ul>
 
-                    <div class="row pt-20 justify-content-center">
+                    {{-- <div class="row pt-20 justify-content-center">
 
                         <div class="col-lg-4 col-6 col-md-4">
                             <div class="about-counter">
@@ -215,7 +214,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> --}}
 
                     <div class="about-btn pt-20">
                         <a href="{{ route('about') }}" class="default-btn border-radius-5">
@@ -560,17 +559,16 @@
                         <div class="testimonial-item-content pl-20">
                             <div class="section-title">
                                 <span class="sp-title2">Testimonial</span>
-                                <h2>See What other People Thinking About Vconn</h2>
+                                <h2>See What Our Customers Say About Mérité</h2>
                             </div>
                             <div class="quote">
                                 <i class='flaticon-straight-quotes'></i>
                             </div>
                             <p>
-                                We decided to outsource our customer service and telephone operator to allow our staff to spend more time on their daily tasks. We were especially impressed by the agents at Call Center International, who demonstrated empathy and attention towards our clients and displayed thorough knowledge of our company through the way they greeted and assisted every caller.
-
+                                “I didn’t expect a body scrub to feel this gentle yet effective. My skin feels noticeably smoother, softer, and more hydrated after every use. It leaves the most beautiful natural glow, especially on areas prone to ingrowns.”
                             </p>
-                            <h3>Moris Jacker</h3>
-                            <span>Developer</span>
+                            <h3>Lina R.</h3>
+                            <span>Customer</span>
                         </div>
                     </div>
                 </div>
@@ -594,17 +592,16 @@
                         <div class="testimonial-item-content pl-20">
                             <div class="section-title">
                                 <span class="sp-title2">Testimonial</span>
-                                <h2>See What other People Thinking About Vconn</h2>
+                                <h2>SLip Scrub & Lip Oil</h2>
                             </div>
                             <div class="quote">
                                 <i class='flaticon-straight-quotes'></i>
                             </div>
                             <p>
-                                As an initiative to support our in-house sales team, we contacted CCI to outsource our sales force. As a result, our current clients’ loyalty has been reinforced thanks to our team having more time to assist them and new customers were gained through the sales agents’ up-selling techniques. We also benefited from valuable insights from the reports that helped improve our sales and marketing plan.
-
+                                “The lip scrub completely transformed my routine. It removes dryness without irritation, and when I follow with the lip oil, my lips stay soft, glossy, and comfortable all day. It’s become my daily essential.”
                             </p>
-                            <h3>Lithiya Gera</h3>
-                            <span>Designer</span>
+                            <h3>Nour A.</h3>
+                            <span>Customer</span>
                         </div>
                     </div>
                 </div>
@@ -628,15 +625,15 @@
                         <div class="testimonial-item-content pl-20">
                             <div class="section-title">
                                 <span class="sp-title2">Testimonial</span>
-                                <h2>See What other People Thinking About Vconn</h2>
+                                <h2>Tanning Oil</h2>
                             </div>
                             <div class="quote">
                                 <i class='flaticon-straight-quotes'></i>
                             </div>
                             <p>
-                                I would highly recommend Call Center International’s Technical Support agents for their professionalism and reliability. We were impressed by their infrastructure and the systems they had at hand. They demonstrated excellent technical skills that align with our service and always met their SLAs which were of great assistance to our in-house technical team who can now focus on developing our service. </p>
-                            <h3>Orbindu Jeason</h3>
-                            <span>Manager</span>
+                                “This tanning oil gives the perfect sun-kissed glow while keeping my skin moisturized and smooth. I love how lightweight it feels and how quickly it absorbs. My skin looks radiant, not greasy.”
+                                <h3>Sara M.</h3>
+                                <span>Customer</span>
                         </div>
                     </div>
                 </div>
@@ -665,8 +662,8 @@
                                 <i class='flaticon-straight-quotes'></i>
                             </div>
                             <p>
- We had a new project in the pipeline and wanted to make use of our contact directory to increase our reach. We met with CCI to share our strategy and introduce our products, shortly after which the sales agents were trained on their tasks and delivered as promised. With the detailed reporting and updates to our database, we quickly noticed an increase in our brand awareness and customer’s loyalty.                            <h3>Orbindu Jeason</h3>
-                            <span>Manager</span>
+                                We had a new project in the pipeline and wanted to make use of our contact directory to increase our reach. We met with CCI to share our strategy and introduce our products, shortly after which the sales agents were trained on their tasks and delivered as promised. With the detailed reporting and updates to our database, we quickly noticed an increase in our brand awareness and customer’s loyalty. <h3>Orbindu Jeason</h3>
+                                <span>Manager</span>
                         </div>
                     </div>
                 </div>

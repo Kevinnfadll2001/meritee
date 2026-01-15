@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\CareerController;
+
 use App\Http\Controllers\CountyController;
 use App\Http\Controllers\FacilityController;
 
@@ -17,7 +17,7 @@ Route::get('/news', [PageController::class, 'news'])->name('news');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/services', [PageController::class, 'services'])->name('services');
 
-Route::post('/careers', [CareerController::class, 'store'])->name('careers.store');;
+
 
 
 // Customers (static pages)

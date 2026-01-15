@@ -21,7 +21,7 @@
 
     <!-- Title & Favicon -->
     <title>CCI</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/logos/logo.jpeg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logos/logo.png') }}">
 </head>
 
 <body>
@@ -100,8 +100,8 @@
                 <div class="mobile-responsive-menu">
                     <div class="logo">
                         <a href="{{ url('/') }}">
-                            <img src="assets/images/logos/logo.jpeg" class="logo-one" alt="Logo">
-                            <img src="assets/images/logos/logo.jpeg" class="logo-two" alt="Logo">
+                            <img src="{{ asset('assets/images/logos/logo.png') }}" class="logo-one" alt="Logo">
+                            <img src="{{ asset('assets/images/logos/logo.png') }}" class="logo-two" alt="Logo">
                         </a>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand" href="{{ route('home') }}">
-                        <img src="{{ asset('assets/images/logos/logo.jpeg') }}" alt="Call Center International" class="nav-logo">
+                        <img src="{{ asset('assets/images/logos/logo.png') }}" alt="Call Center International" class="nav-logo">
                     </a>
 
                     <!-- MENU -->
@@ -134,13 +134,13 @@
                                 <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
                             </li>
 
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="{{ route('careers') }}" class="nav-link {{ request()->routeIs('careers') ? 'active' : '' }}">Careers</a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="{{ route('customers.page1') }}" class="nav-link {{ request()->routeIs('customers.page*') ? 'active' : '' }}">Customers</a>
-                            </li>
+                            </li> --}}
 
                             <li class="nav-item">
                                 <a href="{{ route('news') }}" class="nav-link {{ request()->routeIs('news') ? 'active' : '' }}">News</a>
@@ -165,8 +165,8 @@
             <div class="sidebar-modal-inner">
                 <div class="sidebar-header">
                     <div class="sidebar-logo">
-                        <img src="assets/images/logos/logo-1.png" class="sidebar-logo-1" alt="Image">
-                        <img src="assets/images/logos/logo-2.png" class="sidebar-logo-2" alt="Image">
+                        <img src="{{ asset('assets/images/logos/logo.png') }}" class="sidebar-logo-1" alt="Image">
+                        <img src="{{ asset('assets/images/logos/logo.png') }}" class="sidebar-logo-2" alt="Image">
                     </div>
 
                     <span class="close-btn sidebar-modal-close-btn">
@@ -329,125 +329,65 @@
             <div class="footer-top-two">
                 <div class="row justify-content-center">
 
-                    <!-- PROJECTS -->
+                    <!-- PRODUCTS -->
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-contact-two">
-                            {{-- <div class="icon">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/ccintl-534c7.appspot.com/o/content%2Ficon%20footer%20blue.svg?alt=media&token=b7cdda12-63e4-4086-a648-8795db8ec2ee" alt="Projects Icon" width="40">
-                            </div> --}}
-
                             <div class="content">
-                                <h1>100</h1>
-                                <h2>Projects</h2>
+                                <h1>10+</h1>
+                                <h2>Care Products</h2>
                                 <span>
-                                    With the systems and contact centers in place to handle any requests,
-                                    our projects are delivered with a high success rate, ensuring our
-                                    clients and their customers’ satisfaction.
+                                    Thoughtfully crafted skincare essentials made with clean,
+                                    gentle ingredients to support everyday self-care routines.
                                 </span>
                             </div>
 
                             <div class="right">
-                                <img src="{{ asset('assets/images/logos/Capture2.png') }}" alt="Countries Icon" width="40">
+                                <img src="{{ asset('assets/images/logos/Capture2.png') }}" alt="Products Icon" width="40">
                             </div>
                         </div>
                     </div>
-
 
                     <!-- CUSTOMERS -->
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-contact-two">
-                            {{-- <div class="icon">
-                                <i class="flaticon-customer-service"></i>
-                            </div> --}}
                             <div class="content">
-                                <h1>80</h1>
-                                <h2>Customers</h2>
+                                <h1>100+</h1>
+                                <h2>Happy Customers</h2>
                                 <span>
-                                    Every task handled by CCI has been carefully planned, monitored and
-                                    executed with our clients’ brand and goal in mind, establishing
-                                    trustworthy relationships with some of the biggest companies.
+                                    Loved and trusted by customers who value simplicity,
+                                    honesty, and effective skincare that truly feels good.
                                 </span>
                             </div>
-                            <div class="right">
-                                <img src="{{ asset('assets/images/logos/Capture1.png') }}" alt="Countries Icon" width="40">
-                            </div>
 
+                            <div class="right">
+                                <img src="{{ asset('assets/images/logos/Capture1.png') }}" alt="Customers Icon" width="40">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- COUNTRIES -->
+                    <!-- PHILOSOPHY -->
                     <div class="col-lg-4 col-md-7">
                         <div class="footer-contact-two">
-                            {{-- <div class="icon">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/ccintl-534c7.appspot.com/o/content%2Ficon%20service%20blue.svg?alt=media&token=ec584afd-ed63-4180-9786-5d88cfb61c23" alt="Countries Icon" width="40">
-                            </div> --}}
-
                             <div class="content">
-                                <h1>5</h1>
-                                <h2>Countries</h2>
+                                <h1>100%</h1>
+                                <h2>Clean & Honest</h2>
                                 <span>
-                                    With its Headquarters in the United States and emerging Contact
-                                    Centers in Lebanon, CCI has gone above and beyond to serve customers
-                                    in over 5 additional countries and growing.
+                                    Our philosophy is rooted in natural ingredients,
+                                    transparency, and formulas made with intention and care.
                                 </span>
                             </div>
 
                             <div class="right">
-                                <img src="{{ asset('assets/images/logos/Capture3.png') }}" alt="Countries Icon" width="40">
+                                <img src="{{ asset('assets/images/logos/Capture3.png') }}" alt="Philosophy Icon" width="40">
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
-            <div class="footer-middel footer-simple-content">
-                <div class="container">
-                    <div class="row">
-
-                        <!-- Practice Areas -->
-                        {{-- <div class="col-lg-6 col-md-6">
-                            <div class="footer-widget">
-                                <h3>Practice Areas</h3>
-                                <ul class="footer-list">
-                                    <li>&bull; Customer Care</li>
-                                    <li>&bull; Database Management</li>
-                                    <li>&bull; Lead Generation</li>
-                                    <li>&bull; Omni-Channel Contact Center</li>
-                                    <li>&bull; Surveys and Market Research</li>
-                                    <li>&bull; Technical Support</li>
-                                    <li>&bull; Telemarketing</li>
-                                </ul>
-
-                            </div>
-                        </div> --}}
-
-                        <!-- Newsletter -->
-                        {{-- <div class="col-lg-6 col-md-6">
-                            <div class="footer-widget">
-                                <h3>Newsletter</h3>
-                                <p>Don't miss to subscribe to our news feed, kindly fill the form below.</p>
-
-                                <div class="newsletter-area">
-                                    <form class="newsletter-form">
-                                        <input type="email" class="form-control" placeholder="Email Address">
-                                        <button class="subscribe-btn">Join</button>
-                                    </form>
-                                </div>
-                                <br><br>
-                                <ul class="social-link mt-20">
-                                    <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
-                                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div> --}}
-
-                    </div>
-                </div>
-            </div>
-
+        </div>
     </footer>
+
 
     <style>
         /* ===== CLEAN FOOTER MIDDLE (BLADE ONLY) ===== */
@@ -501,6 +441,23 @@
         .footer-simple-content .social-link a {
             background: #ffffff !important;
             color: #111 !important;
+        }
+
+        .footer-contact-two .content h1 {
+            font-size: 42px;
+            color: #113412;
+            font-weight: 600;
+        }
+
+        .footer-contact-two .content h2 {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-contact-two .content span {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
         }
 
     </style>

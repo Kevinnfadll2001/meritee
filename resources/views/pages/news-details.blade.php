@@ -7,13 +7,16 @@
         margin-top: -5px;
         /* adjust if your header is taller */
     }
- .inner-bg1 {
+
+    .inner-bg1 {
         background-image: url("{{ asset('assets/images/news/news.jpg') }}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        min-height: 300px; /* adjust height if needed */
+        min-height: 300px;
+        /* adjust height if needed */
     }
+
 </style>
 <!-- Inner Banner -->
 <div class="inner-banner inner-bg1 inner-banner-offset">
@@ -28,28 +31,34 @@
         </div>
     </div>
 </div>
-<div class="blog-details-area pt-100 pb-70">
-    <div class="container">
+<div class="page-with-fixed-header">
+    <div class="container pt-100 pb-70">
+
         <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
 
-            <div class="col-lg-10">
-                <img src="{{ asset('assets/images/blog/'.$post['img']) }}"
-                     style="width:100%; margin-bottom:25px;">
+                <span class="sp-title2">Product Benefits</span>
 
-                <div style="margin-bottom:15px;">
-                    <i class="bx bx-calendar"></i> {{ $post['date'] }}
-                </div>
-
-                <h2 style="margin-bottom:20px;">
+                <h2 class="product-title">
                     {{ $post['title'] }}
                 </h2>
 
-                <p style="line-height:1.8;">
-                    {{ $post['content'] }}
+                <p class="product-intro">
+                    Carefully crafted to support your daily self-care routine with gentle,
+                    effective, and thoughtfully selected ingredients.
                 </p>
-            </div>
 
+                <ul class="product-benefits">
+                    @foreach(explode('•', $post['content']) as $benefit)
+                        @if(trim($benefit))
+                            <li>{{ trim($benefit) }}</li>
+                        @endif
+                    @endforeach
+                </ul>
+
+            </div>
         </div>
+
     </div>
 </div>
 

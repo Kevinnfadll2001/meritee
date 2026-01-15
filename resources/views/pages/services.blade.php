@@ -63,13 +63,13 @@
 
 /* Hover effect */
 .services-tab .tabs li a:hover {
-    background: #4a2cc0;
+    background: #113412;
     color: #fff;
 }
 
 /* Active tab (your script already adds .current) */
 .services-tab .tabs li.current a {
-    background: #4a2cc0;
+    background: #113412;
     color: #fff;
     box-shadow: 0 8px 20px rgba(15, 15, 15, 0.3);
 }

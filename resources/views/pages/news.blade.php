@@ -2,10 +2,8 @@
 
 @section('content')
 <style>
-    /* Fix banner position under fixed header */
     .inner-banner-offset {
         margin-top: -5px;
-        /* adjust if your header is taller */
     }
 
     .inner-bg1 {
@@ -14,79 +12,50 @@
         background-position: center;
         background-repeat: no-repeat;
         min-height: 300px;
-        /* adjust height if needed */
     }
 </style>
+
 <!-- Inner Banner -->
 <div class="inner-banner inner-bg1 inner-banner-offset">
     <div class="container">
         <div class="inner-title text-center">
-            <h3>News</h3>
+            <h3>Products</h3>
             <ul>
                 <li><a href="{{ url('/') }}">Home</a></li>
-                <li>News</li>
+                <li>Products</li>
             </ul>
         </div>
     </div>
 </div>
+
 <div class="blog-area pt-100 pb-70">
     <div class="container">
         <div class="row justify-content-center">
 
             @foreach($blogs as $blog)
-            <div class="col-lg-4 col-md-6" style="display:flex; align-items:stretch; margin-bottom:30px;">
-                <div class="blog-card-two"
-                    style="
-                            width:100%;
-                            display:flex;
-                            flex-direction:column;
-                            height:auto !important;
-                            overflow:visible !important;
-                         ">
+            <div class="col-lg-4 col-md-6 d-flex mb-4">
+                <div class="blog-card-two d-flex flex-column w-100">
 
-                    <a href="{{ route('news.details', $blog['slug']) }}" style="display:block;">
-                        <img
-                            src="{{ asset('assets/images/blog/'.$blog['img']) }}"
-                            alt="News Image">
-
+                    <a href="{{ route('news.details', $blog['slug']) }}">
+                        <img src="{{ asset('assets/images/blog/'.$blog['img']) }}"
+                             alt="{{ $blog['title'] }}">
                     </a>
 
-                    <div class="content"
-                        style="
-                                padding:20px;
-                                display:flex;
-                                flex-direction:column;
-                                flex:1;
-                                height:auto !important;
-                                overflow:visible !important;
-                             ">
+                    <div class="content d-flex flex-column flex-grow-1 p-4">
 
-                        <div style="margin-bottom:10px;">
-                            <i class="bx bx-calendar"></i> {{ $blog['date'] }}
+                        <div class="mb-2 text-muted">
+                            <i class="bx bx-package"></i> {{ $blog['date'] }}
                         </div>
 
-                        <h3 style="
-                                margin:0 0 14px 0;
-                                line-height:1.45;
-                                height:auto !important;
-                                max-height:none !important;
-                                overflow:visible !important;
-                            ">
-                            <a href="{{ route('news.details', $blog['slug']) }}"
-                                style="
-                                        display:block;
-                                        white-space:normal !important;
-                                        overflow:visible !important;
-                                        word-break:break-word;
-                                   ">
+                        <h3 class="mb-3">
+                            <a href="{{ route('news.details', $blog['slug']) }}">
                                 {{ $blog['title'] }}
                             </a>
                         </h3>
 
                         <a href="{{ route('news.details', $blog['slug']) }}"
-                            class="read-btn"
-                            style="margin-top:auto;">
-                            Read More
+                           class="read-btn mt-auto">
+                            View Product
                         </a>
 
                     </div>
@@ -97,6 +66,4 @@
         </div>
     </div>
 </div>
-
-
 @endsection
