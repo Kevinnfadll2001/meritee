@@ -1,0 +1,449 @@
+:root {
+    --darkColor: #1d1d1d;
+    --bgColor: #252525;
+    --cardColor: #0e0e0e;
+}
+
+.switch-box {
+    position: fixed;
+    bottom: 15px;
+    right: 120px;
+    z-index: 9999;
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: 1.5px solid var(--orangeColor);
+        transition: 0.4s;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 25px;
+            width: 25px;
+            left: 0px;
+            bottom: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            transition: 0.4s;
+            box-shadow: 0 0px 15px #2020203d;
+            background: white url('../images/night.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.round {
+            border-radius: 34px;
+            &::before {
+                border-radius: 50%;
+            }
+        }
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 30px;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    input:checked + .slider {
+        background-color: transparent;
+        border: 1.5px solid var(--greenColor);
+    }
+      
+    input:focus + .slider {
+        box-shadow: 0 0 1px var(--greenColor);
+    }
+      
+    input:checked + .slider:before {
+        transform: translateX(24px);
+        background: white url('../images/sunny.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.theme-dark {
+    --titleColor: var(--whiteColor);
+    --bodyColor: var(--whiteColor);
+    .default-btn {
+        &:hover {
+            color: var(--cardColor) !important;
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--whiteColor); 
+    }
+    h3 {
+        color: var(--whiteColor); 
+        a {
+            color: var(--whiteColor); 
+            transition: 0.7s;
+        }
+    }
+    p {
+        color: var(--whiteColor); 
+    }
+    body {
+        background: var(--darkColor);
+        color: var(--whiteColor); 
+    }
+    .top-header-bg {
+        background-color: var(--darkColor);
+    }
+    .navbar-area {
+        background-color: var(--bgColor);
+    }
+    .desktop-nav {
+        .navbar {
+            background-color: var(--bgColor);
+            .navbar-brand {
+                .logo-two {
+                    display: inline-block;
+                }
+                .logo-one {
+                    display: none;
+                }
+            }
+            .navbar-nav  {
+                .nav-item {
+                    .dropdown-menu {
+                        background-color: var(--darkColor) !important;
+                        li {
+                            a {
+                                color: var(--whiteColor); 
+                                &.active {
+                                    color: var(--orangeColor);
+                                }
+                                &:hover {
+                                    color: var(--orangeColor);
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+    .desktop-nav-one {
+        background-color: var(--bgColor);
+    }
+    .navbar-area {
+        background-color: var(--bgColor);
+        &.is-sticky {
+            background-color: var(--bgColor) !important;
+        }
+    }
+    .mobile-responsive-nav {
+        .mobile-responsive-menu {
+            &.mean-container {
+                .mean-nav {
+                    background-color: var(--bgColor);
+                    ul {
+                        li {
+                            a {
+                                color: var(--whiteColor);
+                                &.active {
+                                    color: var(--orangeColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mean-container {
+            .mean-bar {
+                background-color: var(--bgColor);
+            }
+        }
+        .logo {
+            width: 105px;
+            .logo-two {
+                display: inline-block;
+            }
+            .logo-one {
+                display: none;
+            }
+        }
+    }
+    .sidebar-modal {
+        .sidebar-modal-inner {
+            background-color: var(--cardColor);
+        }
+        .sidebar-header {
+            .sidebar-logo {
+                .sidebar-logo-2 {
+                    display: inline-block;
+                }
+                .sidebar-logo-1 {
+                    display: none;
+                }
+            }
+        }
+    }
+    .banner-area {
+        background-color: var(--cardColor);
+        &::before {
+            background-color: var(--darkColor);
+        }
+    }
+    .banner-area-three {
+        &::before {
+            background-color: var(--darkColor);
+        }
+    }
+    .banner-area-two {
+        background-color: var(--cardColor);
+    }
+    .inner-banner {
+        &::before {
+            background-color: var(--darkColor);
+        }
+    }
+    .about-img {
+        &::before, &::after {
+            background-color: var(--darkColor);
+        }
+    }
+    .about-counter {
+        background-color: var(--cardColor);
+    }
+    .services-area-bg {
+        &::before {
+            background-color: var(--bgColor);
+        }
+    }
+    .services-item {
+        .content {
+            background-color: var(--cardColor);
+        }
+    }
+    .services-card {
+        background-color: var(--cardColor);
+    }
+    .owl-nav {
+        .owl-prev, .owl-next {
+            color: var(--cardColor) !important;
+        }
+    }
+    .services-tab {
+        .tabs {
+            li {
+                a {
+                    color: var(--whiteColor);
+                    background-color: var(--bgColor);
+                }
+                &.active a {
+                    background-color: var(--orangeColor);
+                    color: var(--whiteColor);
+                }
+                &.current a {
+                    background-color: var(--orangeColor);
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+    .project-area-two {
+        .thumbs-wrap {
+            .owl-thumbs {
+                .owl-thumb-item {
+                    .content {
+                        background-color: var(--cardColor);
+                    }
+                }
+            }
+        }
+    }
+    .project-item {
+        .content {
+            background-color: var(--cardColor);
+        }
+    }
+    .project-categories, .subscribe-area {
+        background-color: var(--bgColor);
+    }
+    .side-bar-from {
+        background-color: var(--bgColor);
+        .appointment-form {
+            .form-group {
+                .form-control {
+                    background-color: var(--cardColor);
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+    .team-card {
+        background-color: var(--bgColor);
+        .content {
+            background-color: var(--bgColor);
+        }
+    }
+    .gallery-photo-item {
+        &::before, &::after {
+            background-color: var(--cardColor);
+        }
+    }
+    .pricing-area {
+        background-color: var(--bgColor);
+    }
+    .pricing-card {
+        background-color: var(--cardColor);
+    }
+    .choose-area-two {
+        background-color: var(--bgColor);
+    }
+    .choose-img-three {
+        &::before, &::after {
+            background-color: var(--bgColor);
+        }
+    }
+    .choose-card, .why-card {
+        &::before {
+            background-color: var(--cardColor);
+        }
+    }
+    .work-area-two {
+        &::before {
+            background-color: var(--darkColor);
+        }
+    }
+    .testimonial-area {
+        &::after {
+            background-color: var(--cardColor);
+        }
+    }
+    .testimonial-item {
+        background-color: var(--cardColor);
+    }
+    .blog-card, .blog-left-content, .blog-card-two {
+        background-color: var(--cardColor);
+    }
+    .article-content-area {
+        .blockquote {
+            background-color: var(--bgColor);
+        }
+    }
+    .comments-wrap {
+        .comment-form {
+            li {
+                a {
+                    color: var(--cardColor);
+                }
+            }
+        }
+    }
+    .search-widget {
+        background-color: var(--bgColor);
+        .search-form {
+            .form-control {
+                background-color: var(--cardColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+    .side-bar-categories {
+        ul {
+            li {
+                a {
+                    background-color: var(--bgColor);
+                }
+            }
+        }
+    }
+    .side-bar-widget {
+        background-color: var(--bgColor);
+        .side-bar-widget-tag {
+            li {
+                background-color: var(--cardColor);
+                &:hover {
+                    background-color: var(--orangeColor);
+                }
+            }
+        }
+    }
+    .subscribe-area-bg {
+        background-color: var(--bgColor);
+    }
+    .subscribe-area {
+        .subscribe-form {
+            .form-control {
+                background-color: var(--cardColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+    .faq-accordion {
+        .accordion {
+            .accordion-item {
+                background-color: transparent;
+            }
+            .accordion-title {
+                background-color: var(--bgColor);
+                &.active {
+                    background-color: var(--orangeColor);
+                }
+            }
+        }
+    }
+
+    .footer-area-bg {
+        background-color: var(--cardColor);
+    }
+    .footer-top-two {
+        background-color: var(--bgColor);
+    }
+    .footer-contact-two {
+        background-color: var(--cardColor);
+        .right {
+            opacity: 0.3;
+        }
+    }
+    .footer-area-bg-two {
+        &::before {
+            background-color: var(--cardColor);
+        }
+    }
+    .contact-form {
+        .form-group {
+            .form-control {
+                background-color: var(--cardColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+    .contact-card {
+        background-color: var(--bgColor);
+    }
+    .user-all-form {
+        .contact-form {
+            background-color: var(--bgColor);
+        }
+    }
+    .coming-soon-area {
+        background-color: var(--cardColor);
+        .coming-soon-content {
+            .newsletter-form {
+                .input-newsletter {
+                    background-color: var(--bgColor);
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+   
+    @media only screen and (max-width: 991px) {
+        .choose-card {
+            background-color: var(--cardColor);
+        }
+    }
+}
