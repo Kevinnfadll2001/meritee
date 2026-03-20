@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\ContactController;
-
 use App\Http\Controllers\CountyController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\CartController;
@@ -18,9 +18,6 @@ Route::get('/news', [PageController::class, 'news'])->name('news');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/products', [PageController::class, 'services'])->name('services');
 
-
-
-
 // Customers (static pages)
 Route::view('/customers', 'pages.customers.customers-1')->name('customers.page1');
 Route::view('/customers/page-2', 'pages.customers.customers-2')->name('customers.page2');
@@ -28,18 +25,13 @@ Route::view('/customers/page-3', 'pages.customers.customers-3')->name('customers
 
 Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 
-Route::get('/news', [PageController::class, 'news'])->name('news');
-
 Route::get('/news/{slug}', [PageController::class, 'newsDetails'])
     ->name('news.details');
-
-
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 // Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
 Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
-
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/checkout/confirm', [CheckoutController::class, 'confirm'])->name('checkout.confirm');
@@ -113,3 +105,15 @@ Route::patch('/cart/update/{key}', [CartController::class, 'update'])
 // Route::get('/san-bernardino-county-nemt', [CountyController::class, 'sanBernardino'])->name('sanBernardinoNemt');
 // Route::get('/orange-county-nemt', [CountyController::class, 'orange'])->name('orangeNemt');
 // Route::get('/los-angeles-county-nemt', [CountyController::class, 'losAngeles'])->name('losAngelesNemt');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

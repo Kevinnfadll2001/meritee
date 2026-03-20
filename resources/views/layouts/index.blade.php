@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/theme-dark.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Title & Favicon -->
-    <title>CCI</title>
+    <title>Meritee</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logos/logo.png') }}">
 </head>
 
@@ -103,15 +103,32 @@
                             <img src="{{ asset('assets/images/logos/logo.png') }}" class="logo-one" alt="Logo">
                             <img src="{{ asset('assets/images/logos/logo.png') }}" class="logo-two" alt="Logo">
                         </a>
+
                     </div>
+
                 </div>
+<div class="mobile-auth-buttons">
+    @guest
+        <a href="{{ route('login') }}" class="login-btn">Login</a>
+        <a href="{{ route('register') }}" class="register-btn">Register</a>
+    @endguest
+
+    @auth
+        <form method="POST" action="{{ route('logout') }}" class="m-0">
+            @csrf
+            <button type="submit" class="login-btn border-0 bg-transparent">
+                Logout
+            </button>
+        </form>
+    @endauth
+</div>
             </div>
         </div>
 
         <!-- Menu For Desktop Device -->
         <div class="desktop-nav nav-area desktop-nav-one">
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-md navbar-light d-flex align-items-center">
+                <nav class="navbar navbar-expand-md navbar-light d-flex align-items-center justify-content-between">
 
                     <!-- LOGO -->
                     <a class="navbar-brand" href="{{ route('home') }}">
@@ -134,14 +151,6 @@
                                 <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Products</a>
                             </li>
 
-                            {{-- <li class="nav-item">
-                                <a href="{{ route('careers') }}" class="nav-link {{ request()->routeIs('careers') ? 'active' : '' }}">Careers</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="{{ route('customers.page1') }}" class="nav-link {{ request()->routeIs('customers.page*') ? 'active' : '' }}">Customers</a>
-                            </li> --}}
-
                             <li class="nav-item">
                                 <a href="{{ route('news') }}" class="nav-link {{ request()->routeIs('news') ? 'active' : '' }}">News</a>
                             </li>
@@ -152,9 +161,33 @@
 
                         </ul>
                     </div>
+                    {{-- login-logout --}}
+                    <div class="nav-actions d-flex align-items-center gap-3">
 
+                        @guest
+                        <a href="{{ route('login') }}" class="login-btn">Login</a>
+                        <a href="{{ route('register') }}" class="register-btn">Register</a>
+                        @endguest
+
+                        @auth
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="login-btn border-0 bg-transparent">
+                                Logout
+                            </button>
+                        </form>
+                        @endauth
                 </nav>
             </div>
+        </div>
+
+
+
+        <!-- CART ICON -->
+        <div class="nav-cart">
+            <a href="{{ route('cart.index') }}" class="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
         </div>
 
 

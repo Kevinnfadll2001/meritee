@@ -70,6 +70,166 @@ Default CSS
   --transition: .5s;
 }
 
+
+
+/* CART ICON - DESKTOP FIXED RIGHT */
+.nav-cart {
+    position: fixed;
+    right: 80px;      /* move left/right */
+    bottom: 100px;    /* move up/down */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+}
+
+.cart-link {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+.cart-link:hover {
+    color: #fff;
+    background: #0f4d1c; /* your green */
+    transform: translateY(-3px);
+}
+@media (max-width: 991px) {
+    .nav-cart {
+        right: 20px;
+        bottom: 95px;
+    }
+
+    .cart-link {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+    }
+}
+
+/* login-logout */
+.login-btn {
+    padding: 8px 18px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: #000;
+    color: #fff !important;
+}
+
+.navbar {
+    position: relative;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.login-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.register-btn {
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+    opacity: 0.9;
+    color: inherit;
+}
+
+/* MOBILE FIX */
+@media (max-width: 991px) {
+    .nav-actions {
+        position: absolute;
+        top: 18px;
+        right: 58px;
+        z-index: 999;
+        gap: 8px;
+        display: flex !important;
+    }
+
+    .login-btn,
+    .register-btn {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+
+    .navbar-brand {
+        max-width: 110px;
+    }
+}
+.mobile-auth-buttons {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .mobile-auth-buttons {
+        display: flex;
+        position: absolute;
+        top: 18px;
+        right: 70px;
+        z-index: 9999;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .mobile-auth-buttons .login-btn,
+    .mobile-auth-buttons .register-btn {
+        padding: 7px 14px;
+        font-size: 13px;
+        border-radius: 25px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .mobile-auth-buttons .login-btn {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+
+    .mobile-auth-buttons .register-btn {
+        background: #000;
+        color: #fff;
+        border: 1px solid #000;
+    }
+}
 body {
   margin: 0;
   padding: 0;
@@ -103,6 +263,7 @@ a:hover, a:focus {
     object-position: center;
     display: block;
 }
+
 
 
 button {
