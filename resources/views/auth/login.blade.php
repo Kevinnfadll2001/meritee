@@ -24,8 +24,12 @@
                             </p>
 
                             <div class="meritee-auth-links">
-                                <a href="{{ route('home') }}" class="outline-btn">Back to Home</a>
-                                <a href="{{ route('register') }}" class="solid-light-btn">Create Account</a>
+                                <a href="{{ route('home') }}" class="default-btn border-radius-5">
+                                    Back to Home
+                                </a>
+                                <a href="{{ route('register') }}" class="default-btn border-radius-5 meritee-light-btn">
+                                    Create Account
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +96,7 @@
                                     @endif
                                 </div>
 
-                                <button type="submit" class="meritee-auth-btn">
+                                <button type="submit" class="default-btn border-radius-5 w-100 meritee-main-btn">
                                     Log In
                                 </button>
 
@@ -101,11 +105,11 @@
                                 </div>
 
                                 <div class="meritee-secondary-actions">
-                                    <a href="{{ route('register') }}" class="meritee-secondary-btn">
+                                    <a href="{{ route('register') }}" class="default-btn border-radius-5 w-100">
                                         Create New Account
                                     </a>
 
-                                    <a href="{{ route('home') }}" class="meritee-back-btn">
+                                    <a href="{{ route('home') }}" class="default-btn border-radius-5 w-100 meritee-guest-btn">
                                         Continue as Guest
                                     </a>
                                 </div>
@@ -130,9 +134,7 @@
 <style>
     .meritee-auth-page {
         padding: 120px 0 80px;
-        background:
-            radial-gradient(circle at top left, rgba(11, 77, 28, 0.08), transparent 35%),
-            linear-gradient(180deg, #f8f8f8 0%, #f2f5f3 100%);
+        background: linear-gradient(180deg, #fdfbf8 0%, #f7f4ef 100%);
         min-height: 100vh;
     }
 
@@ -156,7 +158,7 @@
     .meritee-auth-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(7, 63, 25, 0.78) 0%, rgba(7, 63, 25, 0.90) 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%);
     }
 
     .meritee-auth-content {
@@ -183,7 +185,7 @@
         font-weight: 700;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        color: #dff1e4;
+        color: #f5e7d2;
     }
 
     .meritee-auth-content h2 {
@@ -205,41 +207,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-    }
-
-    .meritee-auth-links a {
-        min-width: 150px;
-        height: 46px;
-        border-radius: 999px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 14px;
-        transition: all 0.3s ease;
-    }
-
-    .outline-btn {
-        border: 1px solid rgba(255,255,255,0.9);
-        color: #fff;
-        background: transparent;
-    }
-
-    .outline-btn:hover {
-        background: #fff;
-        color: #0b4d1c;
-    }
-
-    .solid-light-btn {
-        border: 1px solid #fff;
-        background: #fff;
-        color: #0b4d1c;
-    }
-
-    .solid-light-btn:hover {
-        background: #eaf5ed;
-        color: #0b4d1c;
     }
 
     .meritee-auth-right {
@@ -264,7 +231,7 @@
         font-size: 38px;
         line-height: 1.2;
         margin-bottom: 10px;
-        color: #0b163f;
+        color: #222;
         font-weight: 800;
     }
 
@@ -283,8 +250,8 @@
 
     .meritee-input {
         height: 56px;
-        border-radius: 14px;
-        border: 1px solid #d9d9d9;
+        border-radius: 10px;
+        border: 1px solid #e5e7eb;
         padding: 12px 18px;
         font-size: 15px;
         box-shadow: none !important;
@@ -293,8 +260,8 @@
     }
 
     .meritee-input:focus {
-        border-color: #0b4d1c;
-        box-shadow: 0 0 0 4px rgba(11, 77, 28, 0.08) !important;
+        border-color: #d6b98c;
+        box-shadow: 0 0 0 4px rgba(214, 185, 140, 0.15) !important;
     }
 
     .meritee-auth-options {
@@ -316,39 +283,48 @@
     }
 
     .remember-me input {
-        accent-color: #0b4d1c;
+        accent-color: #d6b98c;
     }
 
     .forgot-link {
         font-size: 14px;
-        color: #0b4d1c;
+        color: #b88b4a;
         text-decoration: none;
         font-weight: 700;
+        transition: 0.3s ease;
     }
 
     .forgot-link:hover {
         text-decoration: underline;
-        color: #083915;
+        color: #9d753d;
     }
 
-    .meritee-auth-btn {
-        width: 100%;
-        height: 56px;
-        border: none;
-        border-radius: 14px;
-        background: linear-gradient(135deg, #0b4d1c 0%, #14652a 100%);
-        color: #fff;
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 0.2px;
+    .default-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: 170px;
+        height: 50px;
+        padding: 0 24px;
+        text-align: center;
+        font-weight: 600;
         transition: all 0.3s ease;
-        box-shadow: 0 12px 25px rgba(11, 77, 28, 0.20);
+        text-decoration: none;
     }
 
-    .meritee-auth-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 16px 30px rgba(11, 77, 28, 0.25);
-        background: linear-gradient(135deg, #083915 0%, #0f5a24 100%);
+    .meritee-main-btn {
+        min-width: 100%;
+    }
+
+    .meritee-light-btn {
+        background: #fff !important;
+        color: #222 !important;
+        border: 1px solid #fff;
+    }
+
+    .meritee-light-btn:hover {
+        background: #f7f7f7 !important;
+        color: #222 !important;
     }
 
     .meritee-divider {
@@ -384,39 +360,15 @@
         gap: 12px;
     }
 
-    .meritee-secondary-btn,
-    .meritee-back-btn {
-        height: 52px;
-        border-radius: 14px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 700;
-        transition: all 0.3s ease;
+    .meritee-guest-btn {
+        background: #f4f4f4 !important;
+        color: #333 !important;
+        border: 1px solid #e2e2e2;
     }
 
-    .meritee-secondary-btn {
-        background: #f3f7f4;
-        color: #0b4d1c;
-        border: 1px solid #dbe7df;
-    }
-
-    .meritee-secondary-btn:hover {
-        background: #e9f2ec;
-        color: #0b4d1c;
-    }
-
-    .meritee-back-btn {
-        background: transparent;
-        color: #374151;
-        border: 1px solid #d1d5db;
-    }
-
-    .meritee-back-btn:hover {
-        background: #f9fafb;
-        color: #111827;
+    .meritee-guest-btn:hover {
+        background: #ebebeb !important;
+        color: #222 !important;
     }
 
     .meritee-auth-bottom {
@@ -427,13 +379,17 @@
     }
 
     .meritee-auth-bottom a {
-        color: #0b4d1c;
+        color: #b88b4a;
         font-weight: 700;
         text-decoration: none;
     }
 
     .meritee-auth-bottom a:hover {
         text-decoration: underline;
+    }
+
+    .invalid-feedback {
+        font-size: 13px;
     }
 
     @media (max-width: 991px) {
@@ -495,7 +451,12 @@
             align-items: flex-start;
         }
 
-        .meritee-auth-links a {
+        .meritee-auth-links {
+            flex-direction: column;
+        }
+
+        .meritee-auth-links a,
+        .default-btn {
             width: 100%;
         }
     }
