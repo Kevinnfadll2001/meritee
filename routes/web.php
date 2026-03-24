@@ -29,12 +29,13 @@ Route::get('/news/{slug}', [PageController::class, 'newsDetails'])
     ->name('news.details');
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/add', [CartController::class, 'add'])->middleware('auth')->name('cart.add');
+// Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 // Route::post('/cart/update', [CartController::class, 'update'])->name('cart.update');
 Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
 
-Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
-Route::post('/checkout/confirm', [CheckoutController::class, 'confirm'])->name('checkout.confirm');
+Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth')->name('checkout');
+Route::post('/checkout/confirm', [CheckoutController::class, 'confirm'])->middleware('auth')->name('checkout.confirm');
 
 Route::patch('/cart/update/{key}', [CartController::class, 'update'])
     ->name('cart.update');

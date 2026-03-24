@@ -107,21 +107,21 @@
                     </div>
 
                 </div>
-<div class="mobile-auth-buttons">
-    @guest
-        <a href="{{ route('login') }}" class="login-btn">Login</a>
-        <a href="{{ route('register') }}" class="register-btn">Register</a>
-    @endguest
+                <div class="mobile-auth-buttons">
+                    @guest
+                    <a href="{{ route('login') }}" class="login-btn">Login</a>
+                    <a href="{{ route('register') }}" class="register-btn">Register</a>
+                    @endguest
 
-    @auth
-        <form method="POST" action="{{ route('logout') }}" class="m-0">
-            @csrf
-            <button type="submit" class="login-btn border-0 bg-transparent">
-                Logout
-            </button>
-        </form>
-    @endauth
-</div>
+                    @auth
+                    <form method="POST" action="{{ route('logout') }}" class="m-0">
+                        @csrf
+                        <button type="submit" class="login-btn border-0 bg-transparent">
+                            Logout
+                        </button>
+                    </form>
+                    @endauth
+                </div>
             </div>
         </div>
 
@@ -162,25 +162,26 @@
                         </ul>
                     </div>
                     {{-- login-logout --}}
-                    <div class="nav-actions d-flex align-items-center gap-3">
+<div class="nav-actions d-flex align-items-center gap-2">
+    @guest
+        <a href="{{ route('login') }}" class="login-btn">Login</a>
+        <a href="{{ route('register') }}" class="register-btn">Register</a>
+    @endguest
 
-                        @guest
-                        <a href="{{ route('login') }}" class="login-btn">Login</a>
-                        <a href="{{ route('register') }}" class="register-btn">Register</a>
-                        @endguest
+    @auth
+        <div class="user-auth-box d-flex align-items-center gap-2">
+            <span class="user-name fw-semibold">{{ Auth::user()->name }}</span>
 
-                        @auth
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="login-btn border-0 ">
-                                Logout
-                            </button>
-                        </form>
-                        @endauth
+            <form method="POST" action="{{ route('logout') }}" class="m-0">
+                @csrf
+                <button type="submit" class="login-btn border-0">Logout</button>
+            </form>
+        </div>
+    @endauth
+</div>
                 </nav>
             </div>
         </div>
-
 
 
         <!-- CART ICON -->
@@ -281,6 +282,7 @@
     <!-- Footer Area -->
 
     <style>
+        
         /* Make all statistic cards equal height */
         .stats-card,
         .services-card,
